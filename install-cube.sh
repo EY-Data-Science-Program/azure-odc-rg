@@ -43,10 +43,10 @@ if ! [[ $LOCAL = "true" ]]; then
   try pip3 install docker-compose
 
   # Get our code
-  url=https://codeload.github.com/EY-Data-Science-Program/2021-Better-Working-World-Data-Challenge/zip/main
+  url=https://codeload.github.com/EY-Data-Science-Program/azure-odc-rg/zip/main
   try wget $url -O /tmp/archive.zip 
   unzip /tmp/archive.zip
-  mv 2021-Better-Working-World-Data-Challenge-main /opt/odc
+  mv azure-odc-rg-main /opt/odc
 
   # We need to change some local vars.
   sed --in-place "s/secretpassword/${PASSWORD}/g" /opt/odc/docker-compose.yml
